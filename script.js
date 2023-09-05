@@ -1,4 +1,4 @@
-const dialogBox = document.getElementById("new-book-form");
+const dialogBox = document.getElementById("bookDialog");
 const showDialogButton = document.getElementById("showDialog");
 const cancelBtn = document.getElementById("cancelForm");
 
