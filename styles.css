@@ -46,4 +46,8 @@ p {
 .main {
     grid-area: main;
     padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    overflow: auto;
 }
