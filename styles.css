@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'header'
+    'main';
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+}
