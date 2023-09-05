@@ -10,7 +10,7 @@ cancelBtn.addEventListener("click", (e) => {
     dialogBox.close();
 });
 
-function Book(title, author, pages, haveRead) {
+function book(title, author, pages, haveRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
