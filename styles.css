@@ -8,6 +8,11 @@ html, body {
     font-size: 16px;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     height: 100vh;
     display: grid;
@@ -22,4 +27,23 @@ html, body {
     grid-area: header;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+    font-size: 2rem;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.new-book {
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+.main {
+    grid-area: main;
+    padding: 40px;
 }
