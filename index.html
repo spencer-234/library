@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <p class="title">Library</p>
+            <p class="header-title">Library</p>
             <p>
                 New Book
                 <span><button class="new-book-btn" id="showDialog">+</button></span>
@@ -19,17 +19,30 @@
         <div class="main">
             <dialog id="bookDialog">
                 <form action="" name="insert-book" class="book-form">
-                    <label for="title">Title:</label>
-                    <input type="text" name="title" required>
-                    <label for="author">Author:</label>
-                    <input type="text" name="author" required>
-                    <label for="pages">Number of pages:</label>
-                    <input type="number" name="pages" required>
-                    <label for="haveRead">Did you read this book?</label>
-                    <input type="checkbox" name="haveRead">
+                    <div>
+                        <p>
+                            New Book
+                            <span><button id="cancelBtn">x</button></span>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div>
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" required>
+                    </div>
+                    <div>
+                        <label for="pages">Number of pages:</label>
+                        <input type="number" name="pages" required>
+                    </div>
+                    <div>
+                        <label for="haveRead">Did you read this book?</label>
+                        <input type="checkbox" name="haveRead">
+                    </div>
                 </form>
                 <button type="submit">Add Book</button>
-                <button id="cancelForm">Cancel</button>
             </dialog>
         </div>
     </div>
