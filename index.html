@@ -13,12 +13,23 @@
             <p class="title">Library</p>
             <p>
                 New Book
-                <span><button class="new-book-btn">+</button></span>
+                <span><button class="new-book-btn" id="showDialog">+</button></span>
             </p>
         </div>
         <div class="main">
-            <dialog id="">
-
+            <dialog id="new-book-form">
+                New Book
+                <form>
+                    <label for="title"></label>
+                    <input type="text" id="title">
+                    <label for="author"></label>
+                    <input type="text" id="author">
+                    <label for="page_number"></label>
+                    <input type="text" id="pageNumber">
+                    <label for="have_read"></label>
+                    <input type="checkbox" id="haveRead">
+                </form>
+                <button type="submit">Add Book</button>
             </dialog>
         </div>
     </div>
