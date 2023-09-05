@@ -10,4 +10,4 @@ function Book(title, author, pages, haveRead) {
     this.author = author;
     this.pages = pages;
     this.haveRead = haveRead;
-}
+};
