@@ -1,6 +1,7 @@
 const dialogBox = document.getElementById("bookDialog");
 const showDialogButton = document.getElementById("showDialog");
 const cancelBtn = document.getElementById("cancelBtn");
+const mainContent = document.querySelector(".main");
 const myLibrary = [];
 const submittedForm = document.querySelector(".book-form")
 
@@ -17,13 +18,14 @@ submittedForm.addEventListener("submit", (e) => {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
-    let haveRead = document.getElementById("haveRead").value;
+    let haveRead = document.getElementById("haveRead").checked ? "Read" : "Not Read";
     let book = new Book(title, author, pages, haveRead);
     addBookToLibrary(book);
+    submittedForm.reset();
+    displayBook(book);
     dialogBox.close();
 })
 
-console.log(myLibrary);
 
 function Book(title, author, pages, haveRead) {
     this.title = title;
@@ -34,4 +36,24 @@ function Book(title, author, pages, haveRead) {
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
+}
+
+function displayBook(book) {
+    let card = document.createElement("div");
+    card.setAttribute("data-book", `${myLibrary.length}`);
+    card.classList.add("card");
+    for (key in book) {
+        let cardElement;
+        if (key == 'haveRead') {
+            cardElement = document.createElement("button");
+            cardElement.classList.add("read-button");
+            cardElement.textContent = `${book[key]}`;
+            card.appendChild(cardElement);
+        } else {
+            cardElement = document.createElement("p");
+            cardElement.textContent = `${key}: ${book[key]}`;
+            card.appendChild(cardElement);
+        }
+    }
+    mainContent.appendChild(card);
 }
