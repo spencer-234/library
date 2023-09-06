@@ -19,11 +19,9 @@
         <div class="main">
             <dialog id="bookDialog">
                 <form action="" name="insert-book" class="book-form">
-                    <div>
-                        <p>
-                            New Book
-                            <span><button id="cancelBtn">x</button></span>
-                        </p>
+                    <div class="form-header">
+                        <button id="cancelBtn">x</button>
+                        <p>New Book</p>
                     </div>
                     <div>
                         <label for="title">Title:</label>
@@ -39,10 +37,10 @@
                     </div>
                     <div>
                         <label for="haveRead">Did you read this book?</label>
-                        <input type="checkbox" name="haveRead">
+                        <input type="checkbox" name="haveRead" class="have-read">
                     </div>
+                    <button type="submit" class="submit-book">Add Book</button>
                 </form>
-                <button type="submit">Add Book</button>
             </dialog>
         </div>
     </div>
