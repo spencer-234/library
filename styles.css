@@ -53,6 +53,10 @@ p {
     overflow: auto;
 }
 
+#bookDialog {
+    border-radius: 25px;
+}
+
 .book-form {
     display: flex;
     flex-direction: column;
@@ -71,11 +75,6 @@ p {
     "header";
 }
 
-.form-header > p {
-    grid-area: header;
-    justify-self: center;
-}
-
 #cancelBtn {
     grid-area: cancelBtn;
     margin-left: auto;
@@ -83,6 +82,11 @@ p {
     border: none;
     font-size: 1rem;
     font-weight: 900;
+}
+
+.form-header > p {
+    grid-area: header;
+    justify-self: center;
 }
 
 .book-form > div > input {
