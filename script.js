@@ -3,7 +3,8 @@ const showDialogButton = document.getElementById("showDialog");
 const cancelBtn = document.getElementById("cancelBtn");
 const mainContent = document.querySelector(".main");
 const myLibrary = [];
-const submittedForm = document.querySelector(".book-form")
+const submittedForm = document.querySelector(".book-form");
+const buttons = document.querySelectorAll(".read-button");
 
 showDialogButton.addEventListener("click", (e) => {
     dialogBox.showModal();
@@ -27,6 +28,7 @@ submittedForm.addEventListener("submit", (e) => {
 })
 
 
+
 function Book(title, author, pages, haveRead) {
     this.title = title;
     this.author = author;
@@ -48,6 +50,11 @@ function displayBook(book) {
             cardElement = document.createElement("button");
             cardElement.classList.add("read-button");
             cardElement.textContent = `${book[key]}`;
+            if (cardElement.textContent === 'Read') {
+                cardElement.style.backgroundColor = "#3bfd04";
+            } else {
+                cardElement.style.backgroundColor = "#e7655c";
+            }
             card.appendChild(cardElement);
         } else {
             cardElement = document.createElement("p");
