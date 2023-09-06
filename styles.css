@@ -89,6 +89,7 @@ p {
 .form-header > p {
     grid-area: header;
     justify-self: center;
+    font-weight: 900;
 }
 
 .book-form > div > input {

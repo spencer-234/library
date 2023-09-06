@@ -4,7 +4,6 @@ const cancelBtn = document.getElementById("cancelBtn");
 const mainContent = document.querySelector(".main");
 const myLibrary = [];
 const submittedForm = document.querySelector(".book-form");
-const buttons = document.querySelectorAll(".read-button");
 
 showDialogButton.addEventListener("click", (e) => {
     dialogBox.showModal();
@@ -27,8 +26,6 @@ submittedForm.addEventListener("submit", (e) => {
     dialogBox.close();
 })
 
-
-
 function Book(title, author, pages, haveRead) {
     this.title = title;
     this.author = author;
@@ -46,7 +43,7 @@ function displayBook(book) {
     card.classList.add("card");
     for (key in book) {
         let cardElement;
-        if (key == 'haveRead') {
+        if (key === 'haveRead') {
             cardElement = document.createElement("button");
             cardElement.classList.add("read-button");
             cardElement.textContent = `${book[key]}`;
