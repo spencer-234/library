@@ -26,16 +26,6 @@ submittedForm.addEventListener("submit", (e) => {
     dialogBox.close();
 })
 
-function buttonToggle() {
-    if (cardElement.textContent === "Read") {
-        cardElement.textContent = "Not Read";
-        cardElement.style.backgroundColor = "#e7655c";
-    } else {
-        cardElement.textContent = "Read";
-        cardElement.style.backgroundColor = "#3bfd04";
-    }
-};
-
 function Book(title, author, pages, haveRead) {
     this.title = title;
     this.author = author;
@@ -63,7 +53,6 @@ function displayBook(book) {
                 cardElement.style.backgroundColor = "#e7655c";
             }
             card.appendChild(cardElement);
-            cardElement.addEventListener("click", buttonToggle)
         } else {
             cardElement = document.createElement("p");
             cardElement.textContent = `${key}: ${book[key]}`;
