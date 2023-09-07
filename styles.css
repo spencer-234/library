@@ -98,6 +98,7 @@ p {
     border: none;
     border-bottom: 2px solid black;
     padding: 5px 10px;
+    width: 7rem;
 }
 
 .have-read {
