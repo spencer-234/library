@@ -39,7 +39,7 @@ function addBookToLibrary(book) {
 
 function displayBook(book) {
     let card = document.createElement("div");
-    card.setAttribute("data-book", `${myLibrary.length}`);
+    card.setAttribute("data-book", `${myLibrary.length - 1}`);
     card.classList.add("card");
     for (key in book) {
         let cardElement;

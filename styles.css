@@ -116,7 +116,7 @@ p {
 }
 
 .card {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,12 +127,12 @@ p {
 }
 
 .read-button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 10px;
     border: 1px solid black;
 }
 
 .title {
     font-weight: 900;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
 }
