@@ -27,10 +27,10 @@ submittedForm.addEventListener("submit", (e) => {
 })
 
 function Book(title, author, pages, haveRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.haveRead = haveRead;
+    this.Title = title;
+    this.Author = author;
+    this.Pages = pages;
+    this.Status = haveRead;
 };
 
 function addBookToLibrary(book) {
@@ -43,7 +43,7 @@ function displayBook(book) {
     card.classList.add("card");
     for (key in book) {
         let cardElement;
-        if (key === 'haveRead') {
+        if (key === 'Status') {
             cardElement = document.createElement("button");
             cardElement.classList.add("read-button");
             cardElement.textContent = `${book[key]}`;
@@ -52,10 +52,20 @@ function displayBook(book) {
             } else {
                 cardElement.style.backgroundColor = "#e7655c";
             }
+            cardElement.addEventListener("click", (e) => {
+                if (cardElement.textContent === "Read") {
+                    cardElement.textContent = "Not Read";
+                    cardElement.style.backgroundColor = "#e7655c";
+                } else {
+                    cardElement.textContent = "Read";
+                    cardElement.style.backgroundColor = "#3bfd04";
+                }
+            })
             card.appendChild(cardElement);
         } else {
             cardElement = document.createElement("p");
             cardElement.textContent = `${key}: ${book[key]}`;
+            cardElement.classList.add(`${key}`.toLowerCase());
             card.appendChild(cardElement);
         }
     }
