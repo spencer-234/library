@@ -39,7 +39,8 @@ function addBookToLibrary(book) {
 
 function displayBook(book) {
     let card = document.createElement("div");
-    card.setAttribute("data-book", `${myLibrary.length - 1}`);
+    let position = myLibrary.length - 1
+    card.setAttribute("data-book", position);
     card.classList.add("card");
     for (key in book) {
         let cardElement;
@@ -69,5 +70,14 @@ function displayBook(book) {
             card.appendChild(cardElement);
         }
     }
+    let removeBtn = document.createElement("button");
+    removeBtn.classList.add("remove-btn");
+    removeBtn.textContent = "Remove";
+    removeBtn.addEventListener("click", (e) => {
+        delete myLibrary[position];
+        mainContent.removeChild(card);
+    });
+    card.appendChild(removeBtn);
     mainContent.appendChild(card);
+    console.log(myLibrary);
 }
