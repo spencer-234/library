@@ -48,8 +48,8 @@ p {
     grid-area: main;
     padding: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
-    grid-template-rows: repeat(auto-fit, minmax(200px, 300px));
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-template-rows: repeat(auto-fit, 300px);
     justify-content: center;
     overflow: auto;
     gap: 20px;
